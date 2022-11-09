@@ -6,16 +6,34 @@
 
 html,
 body {
+  /* layout */
   margin: 0;
   padding: 0;
+
+  /* dimensions */
   width: 100%;
   height: 100vh;
 }
 
 body {
+  /* positioning */
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* colors */
   background-color: darkslategray;
   color: white;
+}
+
+#card {
+  /* positioning */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* dimensions */
+  width: 100%;
+  height: 100%;
 }
