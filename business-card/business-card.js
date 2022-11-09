@@ -1,5 +1,10 @@
-import sheet from "./business-card.css" assert { type: "css" };
-document.adoptedStyleSheets.push(sheet);
+/* import sheet from "./business-card.css" assert { type: "css" };
+document.adoptedStyleSheets.push(sheet); */
+const sheet = document.createElement('link');
+sheet.rel="stylesheet";
+// absolute url from root
+sheet.href = "./business-card/business-card.css";
+document.head.appendChild(sheet);
 
 export class BusinessCard {
   constructor() {
