@@ -1,0 +1,51 @@
+@import url("../../../styles/colors.css");
+@import url("../../../styles/fonts");
+@import url("../../../styles/layout.css");
+@import url("../../../styles/transitions.css");
+
+.button-container,
+.button-container * {
+  box-sizing: border-box;
+}
+
+.button {
+  border: none;
+  padding: var(--content-spacing-medium);
+  border-radius: var(--border-radius-medium);
+  cursor: pointer;
+  border-width: var(--border-width-small);
+  border-style: solid;
+  transition: var(--default-transition);
+  font-family: var(--default-font-family);
+}
+
+.button-primary {
+  background-color: var(--utils-gray-dark);
+  border-color: var(--utils-gray-dark);
+  color: var(--neutrals-white);
+}
+
+.button-primary:hover {
+  background-color: var(--utils-gray-light);
+  border-color: var(--utils-gray-light);
+}
+
+.button-secondary {
+  background-color: transparent;
+  border-color: var(--utils-gray-dark);
+  color: var(--utils-gray-dark);
+}
+
+.button-secondary:hover {
+  border-color: var(--utils-gray-light);
+  color: var(--utils-gray-light);
+}
+
+.button-icon {
+  border: none;
+  background-color: transparent;
+}
+
+.button-icon:hover {
+  opacity: 0.5;
+}

@@ -1,0 +1,14 @@
+@import url("../../../styles/transitions.css");
+
+.image-container,
+.image-container * {
+  box-sizing: border-box;
+}
+
+.image-container {
+  font-size: 0;
+}
+
+.image-container img {
+  transition: var(--default-transition);
+}

@@ -1,0 +1,15 @@
+body {
+  /* font sizes */
+  --font-size-small: 12px;
+  --font-size-medium: 16px;
+  --font-size-large: 24px;
+  --font-size-xlarge: 32px;
+
+  /* font weight */
+  --font-weight-less-bold: 400;
+  --font-weight-bold: 500;
+  --font-weight-more-bold: 600;
+
+  /* font families */
+  --default-font-family: verdana, geneva, tahoma, sans-serif;
+}
