@@ -69,7 +69,7 @@
   font-size: var(--font-size-large);
 
   /* colors */
-  color: var(--utils-gray-dark);
+  color: var(--utils-gray-darker);
 
   /* layout */
   margin-bottom: var(--content-spacing-small);
@@ -80,7 +80,7 @@
   font-size: var(--font-size-medium);
 
   /* colors */
-  color: var(--utils-gray-light);
+  color: var(--utils-gray-dark);
 }
 
 @media (orientation: portrait) {
