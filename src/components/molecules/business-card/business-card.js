@@ -3,7 +3,7 @@ document.adoptedStyleSheets.push(sheet); */
 const sheet = document.createElement('link');
 sheet.rel="stylesheet";
 // absolute url from root
-sheet.href = "./business-card/business-card.css";
+sheet.href = "./src/components/molecules/business-card/business-card.css";
 document.head.appendChild(sheet);
 
 export class BusinessCard {
