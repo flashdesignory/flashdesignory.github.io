@@ -59,8 +59,15 @@ export class Image {
   render() {
     if (this.state.src) this.image.src = this.state.src;
     if (this.state.alt) this.image.alt = this.state.alt;
-    if (this.state.width) this.image.width = this.state.width;
-    if (this.state.height) this.image.height = this.state.height;
+
+    if (this.state.width) {
+      this.image.width = this.state.width;
+      this.container.style.width = `${this.state.width}px`;
+    }
+    if (this.state.height) {
+      this.image.height = this.state.height;
+      this.container.style.height = `${this.state.height}px`;
+    }
 
     if (this.fadeIn) this.image.style.opacity = 0;
     return this.container;
