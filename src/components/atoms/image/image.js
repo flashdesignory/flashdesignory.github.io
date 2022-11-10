@@ -14,11 +14,13 @@ export class Image {
     height,
     imageClass,
     containerClass,
+    style,
     fadeIn = false,
   }) {
     this.state = {};
     this.imageClass = imageClass;
     this.containerClass = containerClass;
+    this.style = style;
     this.fadeIn = fadeIn;
 
     this.handleOnError = this.handleOnError.bind(this);
@@ -28,6 +30,10 @@ export class Image {
     this.container.classList.add("image-container");
     if (this.containerClass) {
       this.container.classList.add(this.containerClass);
+    }
+
+    if (this.style) {
+      Object.keys(this.style).forEach(key => this.container.style[key] = this.style[key])
     }
 
     this.image = document.createElement("img");
@@ -59,15 +65,8 @@ export class Image {
   render() {
     if (this.state.src) this.image.src = this.state.src;
     if (this.state.alt) this.image.alt = this.state.alt;
-
-    if (this.state.width) {
-      this.image.width = this.state.width;
-      this.container.style.width = `${this.state.width}px`;
-    }
-    if (this.state.height) {
-      this.image.height = this.state.height;
-      this.container.style.height = `${this.state.height}px`;
-    }
+    if (this.state.width) this.image.width = this.state.width;
+    if (this.state.height) this.image.height = this.state.height;
 
     if (this.fadeIn) this.image.style.opacity = 0;
     return this.container;
