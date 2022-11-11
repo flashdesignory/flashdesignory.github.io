@@ -5,21 +5,6 @@ import { Avatar } from '../avatar/avatar.js';
 import { Text } from '../../atoms/text/text.js';
 import { Link } from '../../atoms/link/link.js';
 
-import { LinkedInIcon } from '../../../assets/linkedin.js';
-import { LocationIcon } from '../../../assets/location.js';
-import { WorkIcon } from '../../../assets/work.js';
-
-const getIcon = (name) => {
-  switch(name) {
-    case "linkedin":
-      return LinkedInIcon;
-    case "location":
-      return LocationIcon;
-    case "work":
-      return WorkIcon;
-  }
-}
-
 export class BusinessCard {
   constructor({ image, name, title, links }) {
     this.state = {};
@@ -79,12 +64,13 @@ export class BusinessCard {
 
   rebuild() {
     this.state.links.forEach(link => {
-      const { name, icon, url } = link;
+      const { name, type, label, url, target } = link;
       const element = new Link({
-        icon: getIcon(icon),
         name,
-        url, 
-        target: "_blank"
+        type,
+        label,
+        url,
+        target,
       });
       this.list.push(element);
     })
