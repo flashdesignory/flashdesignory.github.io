@@ -1,3 +1,8 @@
+@import url("../../../styles/colors.css");
+@import url("../../../styles/fonts.css");
+@import url("../../../styles/layout.css");
+@import url("../../../styles/transitions.css");
+
 .business-card-container,
 .business-card-container * {
   box-sizing: border-box;
@@ -72,7 +77,7 @@
   color: var(--utils-gray-darker);
 
   /* layout */
-  margin-bottom: var(--content-spacing-small);
+  margin-bottom: var(--content-spacing-medium);
 }
 
 .business-card-container .business-card-title {
@@ -81,6 +86,33 @@
 
   /* colors */
   color: var(--utils-gray-dark);
+
+  /* layout */
+  margin-bottom: var(--content-spacing-xlarge);
+}
+
+.business-card-container .business-card-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.business-card-container .business-card-links a {
+  /* positioning */
+  display: flex;
+
+  /* fonts */
+  font-size: var(--font-size-small);
+
+  /* colors */
+  color: var(--utils-gray-dark);
+
+  /* layout */
+  margin-bottom: var(--content-spacing-small);
+}
+
+.business-card-container .business-card-links a:hover {
+  color: var(--utiils-gray-light);
 }
 
 @media (orientation: portrait) {
@@ -110,5 +142,9 @@
     /* dimensions */
     width: 100%;
     height: 260px;
+  }
+
+  .business-card-container .business-card-links {
+    align-items: center;
   }
 }
