@@ -1,10 +1,5 @@
 // import sheet from './link.css' assert { type: 'css' };
 // document.adoptedStyleSheets.push(sheet);
-const sheet = document.createElement('link');
-sheet.rel="stylesheet";
-// absolute url from root
-sheet.href = "./src/components/atoms/link/link.css";
-document.head.appendChild(sheet);
 
 export class Link {
   constructor({

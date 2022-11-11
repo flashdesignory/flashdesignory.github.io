@@ -1,10 +1,5 @@
 // import sheet from './button.css' assert { type: 'css' };
 // document.adoptedStyleSheets.push(sheet);
-const sheet = document.createElement('link');
-sheet.rel="stylesheet";
-// absolute url from root
-sheet.href = "./src/components/atoms/button/button.css";
-document.head.appendChild(sheet);
 
 export class Button {
   constructor({ type, label, onClick }) {

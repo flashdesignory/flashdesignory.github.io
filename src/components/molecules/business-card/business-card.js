@@ -1,10 +1,5 @@
 /* import sheet from "./business-card.css" assert { type: "css" };
 document.adoptedStyleSheets.push(sheet); */
-const sheet = document.createElement('link');
-sheet.rel="stylesheet";
-// absolute url from root
-sheet.href = "./src/components/molecules/business-card/business-card.css";
-document.head.appendChild(sheet);
 
 import { Avatar } from '../avatar/avatar.js';
 import { Text } from '../../atoms/text/text.js';

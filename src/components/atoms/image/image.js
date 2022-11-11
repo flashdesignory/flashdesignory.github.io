@@ -1,10 +1,5 @@
 // import sheet from './image.css' assert { type: 'css' };
 // document.adoptedStyleSheets.push(sheet);
-const sheet = document.createElement('link');
-sheet.rel="stylesheet";
-// absolute url from root
-sheet.href = "./src/components/atoms/image/image.css";
-document.head.appendChild(sheet);
 
 export class Image {
   constructor({

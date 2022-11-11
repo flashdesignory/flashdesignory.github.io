@@ -1,10 +1,5 @@
 // import sheet from './text.css' assert { type: 'css' };
 // document.adoptedStyleSheets.push(sheet);
-const sheet = document.createElement('link');
-sheet.rel="stylesheet";
-// absolute url from root
-sheet.href = "./src/components/atoms/text/text.css";
-document.head.appendChild(sheet);
 
 export class Text {
   constructor({ text, containerClass, truncate }) {

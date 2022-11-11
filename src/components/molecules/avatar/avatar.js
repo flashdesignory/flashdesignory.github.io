@@ -1,10 +1,5 @@
 // import sheet from './avatar.css' assert { type: 'css' };
 // document.adoptedStyleSheets.push(sheet);
-const sheet = document.createElement('link');
-sheet.rel="stylesheet";
-// absolute url from root
-sheet.href = "./src/components/molecules/avatar/avatar.css";
-document.head.appendChild(sheet);
 
 import { DefaultAvatar } from "../../../assets/avatar.js";
 import { Image } from "../../atoms/image/image.js";
