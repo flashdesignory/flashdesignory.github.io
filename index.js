@@ -10,6 +10,10 @@ const card = new BusinessCard({
     width: "140",
     height: "140",
     alt: "Thorsten Kober",
+    sources: [
+      { srcset: "./src/assets/avatar.jpg", type: "image/jpeg" },
+      { srcset: "./src/assets/avatar.webp", type: "image/webp" }
+    ]
   },
   name: "Thorsten Kober",
   title: "Lead Software Engineer",
