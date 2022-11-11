@@ -11,8 +11,8 @@ const card = new BusinessCard({
     height: "140",
     alt: "Thorsten Kober",
     sources: [
-      { srcset: "./src/assets/avatar.jpg", type: "image/jpeg" },
-      { srcset: "./src/assets/avatar.webp", type: "image/webp" }
+      { srcset: "./src/assets/avatar.webp", type: "image/webp" },
+      { srcset: "./src/assets/avatar.jpg", type: "image/jpeg" }
     ]
   },
   name: "Thorsten Kober",
