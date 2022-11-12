@@ -44,7 +44,7 @@ const card = new BusinessCard({
       name: "Email",
       type: "icon",
       label: EmailIcon,
-      url: "mailto:thorsten@thorstenkober.com",
+      url: "mailto:info@flashdesignory.com",
       target: "_blank"
     }
   ]
