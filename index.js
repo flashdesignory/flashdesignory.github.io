@@ -3,6 +3,7 @@ import { BusinessCard } from "./src/components/molecules/business-card/business-
 import { LinkedInIcon } from './src/assets/linkedin.js';
 import { GithubIcon } from './src/assets/github.js';
 import { WebsiteIcon } from './src/assets/website.js';
+import { EmailIcon } from './src/assets/email.js';
 
 const card = new BusinessCard({
   image: {
@@ -37,6 +38,13 @@ const card = new BusinessCard({
       type: "icon",
       label: WebsiteIcon,
       url: "https://flashdesignory.github.io/",
+      target: "_blank"
+    },
+    {
+      name: "Email",
+      type: "icon",
+      label: EmailIcon,
+      url: "mailto:thorsten@thorstenkober.com",
       target: "_blank"
     }
   ]
