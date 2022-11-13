@@ -7,7 +7,12 @@ import { Link } from '../../atoms/link/link.js';
 
 export class BusinessCard {
   constructor({ image, name, title, links }) {
-    this.state = {};
+    this.state = {
+      image: undefined, // Image class props
+      name: undefined, // string
+      title: undefined, // string
+      links: undefined, // array of links
+    };
     this.list = [];
 
     this.container = document.createElement("div");
@@ -21,11 +26,11 @@ export class BusinessCard {
     this.right.classList.add("business-card-right");
     this.container.appendChild(this.right);
 
-    this.top = document.createElement('div');
+    this.top = document.createElement("div");
     this.top.classList.add("business-card-top");
     this.right.appendChild(this.top);
 
-    this.bottom = document.createElement('div');
+    this.bottom = document.createElement("div");
     this.bottom.classList.add("business-card-bottom");
     this.right.appendChild(this.bottom);
 
@@ -47,13 +52,13 @@ export class BusinessCard {
 
   update({ image, name, title, links }) {
     if (image !== undefined) {
-      this.state.image = {...image};
+      this.state.image = { ...image };
       this.avatar.update({ image: this.state.image });
     }
 
     if (name !== undefined) {
       this.state.name = name;
-      this.name.update({ text: this.state.name});
+      this.name.update({ text: this.state.name });
     }
 
     if (title !== undefined) {
@@ -67,7 +72,7 @@ export class BusinessCard {
   }
 
   rebuild() {
-    this.state.links.forEach(link => {
+    this.state.links.forEach((link) => {
       const { name, type, label, url, target } = link;
       const element = new Link({
         name,
@@ -77,7 +82,7 @@ export class BusinessCard {
         target,
       });
       this.list.push(element);
-    })
+    });
   }
 
   render() {

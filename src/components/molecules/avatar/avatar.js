@@ -6,9 +6,11 @@ import { Image } from "../../atoms/image/image.js";
 
 export class Avatar {
   constructor({ image = {}, containerClass }) {
-    this.state = {};
+    this.state = {
+      image: undefined, // Image class props
+    };
     this.containerClass = containerClass;
-    
+
     this.container = document.createElement("div");
     this.container.classList.add("avatar-container");
 
@@ -29,6 +31,7 @@ export class Avatar {
 
   render() {
     this.container.replaceChildren();
+
     if (this.state.image.src !== undefined) {
       const image = new Image({ fadeIn: true, ...this.state.image });
       this.container.appendChild(image.render());
