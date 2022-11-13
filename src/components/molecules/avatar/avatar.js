@@ -7,7 +7,7 @@ import { Image } from "../../atoms/image/image.js";
 export class Avatar {
   constructor({ image = {}, containerClass }) {
     this.state = {
-      image: undefined, // Image class props
+      image: undefined, // Image
     };
     this.containerClass = containerClass;
 
