@@ -1,5 +1,6 @@
 // import sheet from './text.css' assert { type: 'css' };
 // document.adoptedStyleSheets.push(sheet);
+// import "./text.css";
 
 export class Text {
   constructor({ text, containerClass, truncate }) {

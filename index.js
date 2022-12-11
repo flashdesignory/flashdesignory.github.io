@@ -1,9 +1,9 @@
 import { BusinessCard } from "./src/components/molecules/business-card/business-card.js";
 
-import { LinkedInIcon } from './src/assets/linkedin.js';
-import { GithubIcon } from './src/assets/github.js';
-import { WebsiteIcon } from './src/assets/website.js';
-import { EmailIcon } from './src/assets/email.js';
+import { LinkedInIcon } from "./src/assets/business/linkedin.js";
+import { GithubIcon } from "./src/assets/business/github.js";
+import { WebsiteIcon } from "./src/assets/business/website.js";
+import { EmailIcon } from "./src/assets/business/email.js";
 
 const card = new BusinessCard({
   image: {
@@ -13,8 +13,8 @@ const card = new BusinessCard({
     alt: "Thorsten Kober",
     sources: [
       { srcset: "./src/assets/avatar.webp", type: "image/webp" },
-      { srcset: "./src/assets/avatar.jpg", type: "image/jpeg" }
-    ]
+      { srcset: "./src/assets/avatar.jpg", type: "image/jpeg" },
+    ],
   },
   name: "Thorsten Kober",
   title: "Lead Software Engineer",
@@ -24,29 +24,29 @@ const card = new BusinessCard({
       type: "icon",
       label: LinkedInIcon({}),
       url: "https://www.linkedin.com/in/thorstenkober/",
-      target: "_blank"
+      target: "_blank",
     },
     {
       name: "Github",
       type: "icon",
       label: GithubIcon({}),
       url: "https://github.com/flashdesignory",
-      target: "_blank"
+      target: "_blank",
     },
     {
       name: "Website",
       type: "icon",
       label: WebsiteIcon({}),
       url: "https://flashdesignory.github.io/",
-      target: "_blank"
+      target: "_blank",
     },
     {
       name: "Email",
       type: "icon",
       label: EmailIcon({}),
       url: "mailto:info@flashdesignory.com",
-      target: "_blank"
-    }
-  ]
+      target: "_blank",
+    },
+  ],
 });
 document.getElementById("card").appendChild(card.render());

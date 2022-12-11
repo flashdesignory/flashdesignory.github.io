@@ -1,5 +1,6 @@
 // import sheet from './avatar.css' assert { type: 'css' };
 // document.adoptedStyleSheets.push(sheet);
+// import "./avatar.css";
 
 import { DefaultAvatar } from "../../../assets/avatar.js";
 import { Image } from "../../atoms/image/image.js";

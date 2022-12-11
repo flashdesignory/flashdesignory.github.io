@@ -1,9 +1,10 @@
 /* import sheet from "./business-card.css" assert { type: "css" };
 document.adoptedStyleSheets.push(sheet); */
+// import "./business-card.css";
 
-import { Avatar } from '../avatar/avatar.js';
-import { Text } from '../../atoms/text/text.js';
-import { Link } from '../../atoms/link/link.js';
+import { Avatar } from "../avatar/avatar.js";
+import { Text } from "../../atoms/text/text.js";
+import { Link } from "../../atoms/link/link.js";
 
 export class BusinessCard {
   constructor({ image, name, title, links }) {

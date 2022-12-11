@@ -1,5 +1,6 @@
 // import sheet from './link.css' assert { type: 'css' };
 // document.adoptedStyleSheets.push(sheet);
+// import "./link.css";
 
 export class Link {
   constructor({ name, type = "text", label, url, target = "_blank" }) {
@@ -10,6 +11,9 @@ export class Link {
       url: undefined, // string
       target: undefined, // "_blank" | string
     };
+
+    this.link = document.createElement("a");
+    this.link.classList.add("link");
 
     this.update({ name, type, label, url, target });
   }
@@ -37,9 +41,6 @@ export class Link {
   }
 
   render() {
-    this.link = document.createElement("a");
-    this.link.classList.add("link");
-
     if (this.state.url) {
       this.link.href = this.state.url;
     }
